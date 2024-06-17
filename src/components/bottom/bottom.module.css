@@ -1,0 +1,30 @@
+#main {
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(../../../public/images/neon-net_bottom.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#bottomBottom {
+}
+@media not all and (min-width: 768px) {
+  #bottomBottom {
+    height: 80vh;
+  }
+}
+@media (min-width: 768px) {
+  #bottomBottom {
+    height: 50vh;
+  }
+}
+@media (min-height: 1080px) {
+  #main {
+    @apply text-2xl;
+  }
+  #followusText {
+    @apply text-4xl;
+  }
+  #ContactIcon li a img {
+    @apply w-16 h-16;
+  }
+}

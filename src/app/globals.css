@@ -1,33 +1,268 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: black;
+  color: white;
+}
+input {
+  color: black;
+}
+#main {
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+#Main {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.829),
+      rgba(0, 0, 0, 0.144),
+      rgba(0, 0, 0, 0.699)
+    ),
+    url("../../public/images/bacground.png");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 10px rgb(57, 0, 71);
+}
+
+#downArrow {
+  animation: downArrowAnimation 5s linear infinite;
+}
+@keyframes downArrowAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+
+#greetingText {
+  text-shadow: 0 0 70px #af0198;
+}
+#subText {
+  color: #edb6f8;
+  word-spacing: 2px;
+  font-size: 19px;
+  @apply mt-10 max-sm:mt-5 max-sm:text-sm max-sm:pr-10 max-sm:pl-10;
+}
+
+#exploreBtn {
+  background: linear-gradient(45deg, rgb(26, 25, 25), rgb(247, 1, 255));
+  box-shadow: 0 0 10px rgb(247, 1, 255);
+}
+#exploreBtn:hover {
+  background: linear-gradient(45deg, rgb(17, 17, 17), rgb(210, 0, 218));
+}
+
+#topReact_React {
+  animation: reactRote_React 10s linear infinite;
+}
+@keyframes reactRote_React {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#topReact_Html {
+  animation: reactRote_Html 15s linear infinite;
+}
+@keyframes reactRote_Html {
+  from {
+    rotate: 360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+#topReact_Js {
+  animation: reactRote_Js 15s linear infinite;
+}
+@keyframes reactRote_Js {
+  from {
+    rotate: 360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+#topReact_Tailwind {
+  animation: reactRote_Tailwind 10s linear infinite;
+}
+@keyframes reactRote_Tailwind {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+#SeeItBtn {
+  background: linear-gradient(90deg, rgb(145, 0, 0), rgba(3, 3, 175, 0.993));
+}
+#SeeItBtn:hover {
+  background: linear-gradient(90deg, rgb(109, 0, 0), rgba(0, 0, 134, 0.993));
+}
+#SeeItBtn:active {
+  background: linear-gradient(90deg, rgb(80, 0, 0), rgba(0, 0, 90, 0.993));
+}
+/* section_2_start */
+#section_2 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0)),
+    url("../../public/images/page_2_background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* section_2_end */
+
+/* section_3_start */
+#section_3 {
+  background: black;
+  background-size: cover;
+  background-position: center;
+}
+.borderBox {
+  box-shadow: 0px 0px 0px 10px blue;
+}
+#slideTextUl {
+  transform: translateX(-339px);
+  animation: scroll 25s infinite linear;
+}
+
+#triangle {
+  filter: drop-shadow(0 0 30px rgb(255, 0, 242));
+}
+#ring_1 {
+}
+#ring_1::before {
+  content: "";
+  border-top: solid 10px rgb(55, 0, 255);
+  animation: ring1 20s linear infinite;
+  @apply h-96 w-96 max-sm:w-64 max-sm:h-64 rounded-full absolute;
+}
+@keyframes ring1 {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#ring_1::after {
+  content: "";
+  border-top: solid 10px rgb(255, 0, 191);
+
+  animation: ring2 20s linear infinite;
+
+  @apply h-80 w-80 max-sm:w-56 max-sm:h-56 rounded-full;
+}
+#insideRing {
+  background: #af0198;
+  box-shadow: 0 0 50px #af0198;
+}
+
+@keyframes ring2 {
+  from {
+    rotate: 360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+.commonAnimationrightforCube {
+  /* filter: drop-shadow(0 0 50px blue); */
+  animation: cubeRotated 10s linear infinite;
+}
+@keyframes cubeRotated {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  100% {
+    rotate: 360deg;
+    opacity: 1;
+  }
+}
+
+/* section_3_end */
+
+/* responsive_part */
+
+/* sm-max */
+@media not all and (min-width: 640px) {
+  #subText {
+    word-spacing: 0px;
+  }
+}
+/* sm-max */
+
+/* sm */
+@media (min-width: 640px) {
+}
+/* sm */
+
+/* md */
+@media (min-width: 768px) {
+}
+/* md */
+
+/* lg */
+
+@media (min-width: 1024px) {
+  .card_box {
+    width: 1000px;
+  }
+}
+
+@media (min-width: 2400px) {
+}
+/* lg */
+
+/* height_section */
+
+
+@media (min-height: 991px) {
+  #Main {
+    min-height: 100vh;
+  }
+  #greetingText {
+    @apply text-7xl;
+  }
+  #exploreBtn {
+    @apply h-14 text-2xl mt-16;
+  }
+  #ScrollDiv {
+    @apply mt-24;
+  }
+  #ScrollText {
+    @apply text-5xl;
+  }
+
+  #subText {
+    @apply text-2xl;
+  }
+  p {
+    @apply text-2xl;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+}
+
+

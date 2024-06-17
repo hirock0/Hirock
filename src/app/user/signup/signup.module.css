@@ -1,0 +1,22 @@
+#main{
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.829),rgba(0, 0, 0, 0)), url("../../../../public/images/keypad.jpg");
+    background-size: cover;
+    background-position: center;
+}
+@media (min-height:1080px) {
+        #main{
+            font-size: 30px;
+        }
+        #main button{
+           @apply h-20
+        }
+        #main input{
+            @apply h-20 text-3xl
+        }
+        #insideMain_DIv{
+                @apply w-4/5
+        }
+        #createNewbutton{
+            @apply h-20
+        }
+}

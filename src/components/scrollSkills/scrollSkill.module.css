@@ -1,0 +1,26 @@
+#main {
+  @apply lg:h-60 h-52;
+}
+
+#ScrollDiv {
+  animation: scroll 30s infinite linear;
+  transform: translateX(-1600px);
+  @apply absolute top-3;
+}
+#slideUl {
+  @apply flex gap-10 w-full;
+}
+#slideUl li {
+  background: linear-gradient(45deg, rgb(179, 167, 0), rgb(0, 0, 0));
+
+  @apply h-40 w-40  whitespace-nowrap flex items-center justify-center object-cover p-4 lg:w-52 lg:h-52  rounded-md overflow-hidden;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-1600px);
+  }
+}

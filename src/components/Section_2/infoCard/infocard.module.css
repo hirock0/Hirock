@@ -1,0 +1,9 @@
+#SmallBtn {
+  background: linear-gradient(45deg, red, cyan);
+}
+#SmallBtn:hover {
+  background: linear-gradient(45deg, rgb(170, 1, 1), rgb(0, 184, 184));
+}
+#SmallBtn:active {
+  background: linear-gradient(45deg, rgb(116, 0, 0), rgb(0, 138, 138));
+}

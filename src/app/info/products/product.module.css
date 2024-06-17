@@ -1,0 +1,51 @@
+#main {
+  background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.473), black),
+    url("../../../../public/images/neoBackground.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#mainTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#mainTop div {
+  @apply border p-2 rounded-md backdrop:filter backdrop-blur-3xl;
+}
+#mainTop div h1 {
+  @apply text-center;
+}
+
+@media not all and (min-width: 640px) {
+  #mainTop {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 640px) {
+  #mainTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) {
+  #mainTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  #mainTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-height: 1080px) {
+  #main {
+    @apply pt-40;
+  }
+}

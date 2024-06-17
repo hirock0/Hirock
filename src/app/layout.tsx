@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { ReduxProvider } from "@/redux/provider";
+import { Toaster } from "react-hot-toast";
+import Bottom from "@/components/bottom/Bottom";
+import NavBar from "@/components/Nav_bar/NavBar";
+import Provider from "@/AuthProvider/Authprovider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +20,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Toaster
+          toastOptions={{
+            style: {
+              background: "rgb(51 65 85)",
+              color: "#fff",
+            },
+          }}
+        />
+        <Provider>
+          <ReduxProvider>
+            <div>{children}</div>
+
+            <div className="">
+              <NavBar />
+              <section className="  mt-10 border-t-2 overflow-hidden">
+                <Bottom />
+              </section>
+            </div>
+          </ReduxProvider>
+        </Provider>
+      </body>
     </html>
   );
 }

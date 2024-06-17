@@ -1,0 +1,10 @@
+#main {
+  background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.418), black),
+    url("../../../../public/images/success_background.jpeg");
+}
+
+@media (min-height: 1080px) {
+  #main {
+    @apply pt-40;
+  }
+}

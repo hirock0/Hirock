@@ -1,0 +1,48 @@
+#AllProductDiv {
+  @apply gap-5;
+}
+#AllProductDiv div {
+  @apply rounded-md overflow-hidden;
+}
+@media not all and (min-width: 640px) {
+  #AllProductDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    @apply w-full;
+  }
+  #AllProductDiv div {
+    @apply w-full;
+  }
+}
+
+@media (min-width: 640px) {
+  #AllProductDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @apply w-full;
+  }
+  #AllProductDiv div {
+    @apply w-full;
+  }
+}
+
+@media (min-width: 768px) {
+  #AllProductDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @apply w-full;
+  }
+  #AllProductDiv div {
+    @apply w-full;
+  }
+}
+@media (min-width: 1024px) {
+  #AllProductDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @apply w-full;
+  }
+  #AllProductDiv div {
+    @apply w-full;
+  }
+}

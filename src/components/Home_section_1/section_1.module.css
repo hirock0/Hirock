@@ -1,0 +1,55 @@
+#animation1 {
+  width: 300px;
+  animation: ani3 10s linear infinite;
+  @apply max-md:w-40;
+}
+@keyframes ani3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#animation2 {
+  width: 300px;
+  animation: ani4 10s linear infinite;
+  @apply max-md:w-40;
+}
+@keyframes ani4 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#animationleft1 {
+  width: 300px;
+  animation: ani1 10s linear infinite;
+  @apply max-md:w-40;
+}
+@keyframes ani1 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#animationleft2 {
+  width: 300px;
+  animation: ani2 10s linear infinite;
+  @apply max-md:w-40;
+}
+@keyframes ani2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

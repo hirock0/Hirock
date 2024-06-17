@@ -1,0 +1,55 @@
+#topSection{
+    background: linear-gradient(rgba(0, 0, 0, 0.548),rgba(0, 0, 0, 0.39),rgb(0, 0, 0)),url(../../../../public/images/bacground_about_us.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.introcard_2{
+ padding-left: 21%;
+}
+.introcard_1{
+    padding-right: 21%;
+   }
+   
+   @media not all and (min-width: 640px) {
+    .introcard_2{
+        padding-left: 0%;
+        
+       }
+       .introcard_1{
+           padding-right: 0%;
+          }
+          .introcard_2 div p{
+            font-size: 2.8vmin;
+            
+           }
+           .introcard_1 div p{
+               font-size: 2.8vmin;
+              }
+}
+
+
+
+@media (min-height:1080px) {
+    #main{
+        @apply pt-44 text-2xl  
+    }
+
+    .introcard_2{
+        padding-left: 0%;
+       }
+       .introcard_1{
+           padding-right: 0%;
+          }
+
+    .introcard_2 div{
+            height: 50vh;
+            width: 50vw;
+            
+       }
+       .introcard_1 div{
+        height: 50vh;
+        width: 50vw;
+        
+          }
+
+}
